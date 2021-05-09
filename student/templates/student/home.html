@@ -1,0 +1,79 @@
+{% extends "student/base.html" %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-md navbar-dark bgdark">
+  <a class="navbar-brand" href="#">Student Information</a>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="navbar-item">
+        <a class="nav-link" href="{% url 'home' %}">Home</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Student Information</h1>
+    <p>Student and Course Overview</p>
+  </div>
+</div>
+<div class="container" id="secondenrollment">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Number of Students Enrolled</h6>
+          <p class="card-text">{{ enrolled }}<p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Number of Courses Offered</h6>
+          <p class="card-text">{{ coursesoffered }}<p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Average GPA</h6>
+          <p class="card-text">{{ avggpa }}<p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div></br>
+<div class="container" id="secondenrollment">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Number of Sophomores</h6>
+          <p class="card-text">{{ numbersophomores }}<p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Number of Juniors</h6>
+          <p class="card-text">{{ numberjuniors }}<p>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h6 class="card-title">Number of Seniors</h6>
+          <p class="card-text">{{ numberseniors }}<p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% endblock %}
